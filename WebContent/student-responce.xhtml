@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	
+	<h:head>
+		<title>Hello Udayanga Responce</title>
+		
+	</h:head>
+	<h:body>
+		Hello #{student.firstName} #{student.lastName} from #{student.country} 
+		Favarite Language is #{student.language}
+		
+		Other Languages
+		<ul>
+			<ui:repeat  value="#{student.otherLanguages}" var="tempLanguage">
+				<li>#{tempLanguage}</li>
+			</ui:repeat>
+		</ul>
+		
+	</h:body>
+</html>
